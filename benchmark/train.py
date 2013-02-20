@@ -3,7 +3,9 @@ from features import FeatureMapper, SimpleTransform
 import numpy as np
 import pickle
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.svm import SVC 
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 
 def feature_extractor(data):
@@ -27,11 +29,13 @@ def my_tokenizer(s):
 def get_pipeline(data):
     features = feature_extractor(data)
     steps = [("extract_features", features),
-             ("classify", RandomForestRegressor(n_estimators=50, 
-                                                verbose=2,
-                                                n_jobs=3,
-                                                min_samples_split=30,
-                                                random_state=3465343))]
+             #("classify", RandomForestRegressor(n_estimators=50, 
+             #                                   verbose=2,
+             #                                   n_jobs=3,
+             #                                   min_samples_split=30,
+             #                                   random_state=3465343))]
+             ("classify", SVC())]
+             #("classify", LinearRegression())]
     return Pipeline(steps)
 
 def main():

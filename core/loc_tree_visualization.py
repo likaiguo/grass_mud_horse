@@ -1,6 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-f=file("/Users/lisiyu/Desktop/competition/train/Location_Tree.csv")
+f=file("../train/Location_Tree.csv")
 a=f.readlines()
 x=[]
 G=nx.Graph()
@@ -18,5 +18,5 @@ for item in x:
 pos=nx.graphviz_layout(G,prog='twopi',args='')
 plt.figure(figsize=(8,8))
 nx.draw(G,pos,node_size=20,alpha=0.5,node_color="blue", with_labels=False)
-plt.axis('equal')s
+plt.axis('equal')
 plt.show()
