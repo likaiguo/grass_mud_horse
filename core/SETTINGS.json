@@ -1,0 +1,6 @@
+{
+    "train_data_path": "/Users/lisiyu/Desktop/competition/train/Train.csv",
+    "valid_data_path": "/Users/lisiyu/Desktop/competition/test/Valid.csv",
+    "model_path": "/Users/lisiyu/Desktop/competition/core/model/",
+    "prediction_path": "/Users/lisiyu/Desktop/competition/core/model/random_forest_benchmark.csv"
+}
